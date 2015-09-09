@@ -1,0 +1,47 @@
+=======================
+Preamble
+=======================
+You've been hired as an Android Engineer to build a TV Guide application. Another developer has already begun work on the project but
+has recently decided to pursue a career in gangster rap which is probably a good move looking at their code.
+You must complete what they have started, for the fate of the world (of local tv) depends on it.
+
+=======================
+API
+=======================
+== The TV Programme ==
+The TV Guide you'll be programming to is found at this URL:
+http://whatsbeef.net/wabz/guide.php?start=0
+The returned JSON consists of 2 parts:
+	* Results - JSONArray of TV programs
+	* Count - Total programs available
+The url parameter 'start' determines the offset of the list, with the list returning 10 items at once.
+
+For example, if count is 28, then start=0 will return programs 0-9, start=10 will return 10-19, and start=20 will return 20-28.
+
+
+=======================
+App Requirements
+=======================
+
+The app will simply display a list of TV programmes pulled from the API.
+You must complete these tasks (in any order you like). Create a git repository and commit your work as you go
+
+You can use any 3rd party libraries you like.
+You can play with the app design however you like.
+
+* The list must be endless where scrolling down automatically populates the rest of the list up until the maximum number of
+  programs specified by the 'count' result that is returned from the above URL.
+* The list items currently only show the name of the program. You must modify the items to display all the information that
+  is returned through the API, including start_time, end_time, channel, and rating. You can design the list items however you like. 
+* Create models for the data used in the app.
+* App requests must be asynchronous
+* Offline Caching - If the user accesses the app again while offline we want to make sure they can still see the data that has
+  been downloaded previously. Implement local storage for the data fetched through the API. You can do this any way you want.
+
+Generate an APK when you're finished.
+
+=======================
+BONUS
+=======================
+* Make the app compatible for Gingerbread and above
+* Create a mock flavor of the app using gradle and mock the API end points to return mock model data.
