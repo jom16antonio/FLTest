@@ -1,3 +1,3 @@
 # FLTest
-FreeLancer Test: Programming Exercise by Joey Mar Antonio
+FreeLancer Test: Programming Exercise
 9/9/2015
